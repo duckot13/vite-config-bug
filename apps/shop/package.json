@@ -6,8 +6,27 @@
     "projectType": "application",
     "tags": ["scope:shop"],
     "targets": {
+      "build": {
+        "executor": "@nx/vite:build",
+        "options": {
+          "outputPath": "dist/apps/shop",
+          "viteConfig": "apps/shop/vite.config.ts"
+        },
+        "configurations": {
+          "development": {
+            "mode": "development"
+          },
+          "production": {
+            "mode": "production"
+          }
+        }
+      },
       "serve": {
-        "dependsOn": ["@org/api:serve"]
+        "dependsOn": ["@org/api:serve"],
+        "executor": "@nx/vite:dev-server",
+        "options": {
+          "buildTarget": "@org/shop:build:development"
+        }
       },
       "dev": {
         "dependsOn": ["@org/api:serve"]
