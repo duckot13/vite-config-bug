@@ -15,6 +15,14 @@ export default defineConfig(() => ({
     host: 'localhost',
   },
   plugins: [
+    {
+      name: 'log-server',
+      enforce: 'pre',
+      config(config) {
+        // config.server.watch === false
+        console.log(config.server)
+      },
+    },
     federation({
       dts: false,
       exposes: {},
