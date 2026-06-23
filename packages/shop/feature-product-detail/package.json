@@ -18,7 +18,7 @@
     ]
   },
   "devDependencies": {
-    "@org/shop-data": "*",
-    "@org/shop-shared-ui": "*"
+    "@org/shop-data": "workspace:*",
+    "@org/shop-shared-ui": "workspace:*"
   }
 }

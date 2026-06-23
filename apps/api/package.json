@@ -124,7 +124,7 @@
   },
   "dependencies": {
     "express": "^4.21.2",
-    "@org/api-products": "*",
-    "@org/models": "*"
+    "@org/api-products": "workspace:*",
+    "@org/models": "workspace:*"
   }
 }

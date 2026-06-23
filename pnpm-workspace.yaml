@@ -3,3 +3,9 @@ allowBuilds:
   esbuild: true
   nx: true
   unrs-resolver: true
+
+packages:
+  - "apps/*"
+  - "packages/api/*"
+  - "packages/shared/*"
+  - "packages/shop/*"

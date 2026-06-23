@@ -23,6 +23,6 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@org/models": "*"
+    "@org/models": "workspace:*"
   }
 }

@@ -181,6 +181,92 @@ importers:
         specifier: ~4.1.0
         version: 4.1.9(@types/node@20.19.9)(@vitest/coverage-v8@4.1.9)(@vitest/ui@4.1.9)(jsdom@22.1.0)(vite@8.0.16(@types/node@20.19.9)(esbuild@0.27.7)(jiti@2.4.2)(terser@5.48.0)(yaml@2.9.0))
 
+  apps/api:
+    dependencies:
+      '@org/api-products':
+        specifier: workspace:*
+        version: link:../../packages/api/products
+      '@org/models':
+        specifier: workspace:*
+        version: link:../../packages/shared/models
+      express:
+        specifier: ^4.21.2
+        version: 4.22.2
+
+  apps/shop:
+    devDependencies:
+      '@org/models':
+        specifier: workspace:*
+        version: link:../../packages/shared/models
+      '@org/shop-data':
+        specifier: workspace:*
+        version: link:../../packages/shop/data
+      '@org/shop-feature-product-detail':
+        specifier: workspace:*
+        version: link:../../packages/shop/feature-product-detail
+      '@org/shop-feature-products':
+        specifier: workspace:*
+        version: link:../../packages/shop/feature-products
+      '@org/shop-shared-ui':
+        specifier: workspace:*
+        version: link:../../packages/shop/shared-ui
+
+  apps/shop-e2e: {}
+
+  packages/api/products:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
+    devDependencies:
+      '@org/models':
+        specifier: workspace:*
+        version: link:../../shared/models
+
+  packages/shared/models: {}
+
+  packages/shared/test-utils:
+    devDependencies:
+      '@org/models':
+        specifier: workspace:*
+        version: link:../models
+
+  packages/shop/data:
+    devDependencies:
+      '@org/models':
+        specifier: workspace:*
+        version: link:../../shared/models
+
+  packages/shop/feature-product-detail:
+    devDependencies:
+      '@org/shop-data':
+        specifier: workspace:*
+        version: link:../data
+      '@org/shop-shared-ui':
+        specifier: workspace:*
+        version: link:../shared-ui
+
+  packages/shop/feature-products:
+    devDependencies:
+      '@org/models':
+        specifier: workspace:*
+        version: link:../../shared/models
+      '@org/shop-data':
+        specifier: workspace:*
+        version: link:../data
+      '@org/shop-shared-ui':
+        specifier: workspace:*
+        version: link:../shared-ui
+
+  packages/shop/shared-ui:
+    devDependencies:
+      '@org/models':
+        specifier: workspace:*
+        version: link:../../shared/models
+      '@org/shared-test-utils':
+        specifier: workspace:*
+        version: link:../../shared/test-utils
+
 packages:
 
   '@adobe/css-tools@4.5.0':
